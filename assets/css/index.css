@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --primary-color: #0079d3;
+    --text-color: #333;
+    --text-button-color: #8d9092;
+    --border-color: #ccc;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: #DAE0E6;
+}
+
+.post-wrapped {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 740px;
+    min-height: 500px;
+    padding: 16px;
+}
+
+.post-label {
+    border-bottom: 2px solid #fff;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.form-wrapped {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.form-label {
+    width: 100%;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-button-color);
+}
+
+.form-label.active {
+    color: var(--primary-color);
+}
+
+button {
+    border: 1px solid var(--border-color);
+    border-left: none;
+    border-top: none;
+    padding: 4px 0;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+button:first-child {
+    border-top-left-radius: 5px;
+}
+
+button:last-child {
+    border-right: none;
+    border-top-right-radius: 5px;
+}
+
+button span {
+    margin-left: 10px;
+}
+
+button span i {
+    font-size: 2.4rem;
+}
+
+/* css form */
+
+.form {
+    padding: 16px;
+}
+
+textarea, input {
+    border: 1px solid var(--border-color);
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+#form-title {
+    padding: 8px 64px 8px 16px;
+}
+
+/* css text area */
+#form-content {
+    padding: 16px;
+    min-height: 200px;
+    font-family: inherit;
+    font-size: 1.4rem;
+}
+
+/* css drag and drop image */
+.drag-drop-area {
+    min-height: 200px;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.form-content.active {
+    display: block;
+}
+
+/* css button submit */
+
+.form-submit-btn {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.form-submit-btn button {
+    padding: 6px 16px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.form-submit-btn button:hover {
+    opacity: 0.8;
+}
+
