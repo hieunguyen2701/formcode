@@ -38,6 +38,7 @@ html {
     border-bottom: 2px solid #fff;
     color: var(--primary-color);
     font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .form-wrapped {
@@ -46,7 +47,9 @@ html {
     border-radius: 5px;
 }
 
-.form-label {
+/* css form label */
+.form-labels {
+    position: relative;
     width: 100%;
     font-size: 1.4rem;
     display: flex;
@@ -55,11 +58,28 @@ html {
     color: var(--text-button-color);
 }
 
+.line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 15px;
+    background-color: var(--primary-color);
+    transition: all 0.2s ease;
+}
+
+.form-label:hover,
 .form-label.active {
     color: var(--primary-color);
+    background-color: rgba(0,121,211,0.05);
 }
 
 button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid var(--border-color);
     border-left: none;
     border-top: none;
@@ -79,6 +99,7 @@ button:last-child {
 
 button span {
     margin-left: 10px;
+    font-weight: 600;
 }
 
 button span i {
@@ -109,6 +130,7 @@ textarea, input {
     min-height: 200px;
     font-family: inherit;
     font-size: 1.4rem;
+    display: none;
 }
 
 /* css drag and drop image */
@@ -121,16 +143,12 @@ textarea, input {
     display: none;
 }
 
+#form-content.active,
 .form-content.active {
-    display: block;
+    display: inline-block;
 }
 
 /* css button submit */
-
-.form-submit-btn {
-    display: flex;
-    flex-direction: row-reverse;
-}
 
 .form-submit-btn button {
     padding: 6px 16px;
