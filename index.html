@@ -35,13 +35,20 @@
                         <div class="line"></div>
                     </div>
                     <div class="form">
-                        <form action="" id="form_1">
+                        <form action="/upload" method="post" id="form_1">
                             <input type="text" name="" id="form-title" placeholder="Title">
                             <!-- text content -->
                             <textarea name="" id="form-content" class="form-content active" placeholder="Text (optional)" cols="30" ></textarea>
                             <!-- drag and drop img -->
-                            <div class="drag-drop-area form-content">
-                                
+                            <div class="drag-drop-area form-content" draggable="true">
+                                <div class="top">
+                                    <span class="inner">Drag & drop images here or </span>
+                                    <span class="select">Upload</span>
+                                    <input name="file" type="file" class="file" id="input-file" multiple>
+                                </div>
+                                <div class="images-container" >
+                                    
+                                </div>
                             </div>
                             <!-- button submit -->
                             <div class="form-submit-btn btn">

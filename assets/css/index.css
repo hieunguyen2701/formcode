@@ -45,17 +45,22 @@ html {
     margin-top: 20px;
     background-color: #fff;
     border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 0.2);
 }
 
 /* css form label */
 .form-labels {
     position: relative;
     width: 100%;
-    font-size: 1.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text-button-color);
+}
+
+.form-label:nth-child(2) {
+    border-right: none;
+    border-top-right-radius: 5px;
 }
 
 .line {
@@ -82,7 +87,9 @@ button {
     justify-content: center;
     border: 1px solid var(--border-color);
     border-left: none;
-    border-top: none;
+    border-top: none;    
+    font-size: 1.4rem;
+    color: var(--text-button-color);
     padding: 8px 0;
     background-color: #fff;
     cursor: pointer;
@@ -116,6 +123,7 @@ textarea, input {
     border: 1px solid var(--border-color);
     width: 100%;
     border-radius: 5px;
+    font-size: 1.4rem;
     outline: none;
     margin-bottom: 10px;
 }
@@ -133,20 +141,107 @@ textarea, input {
     display: none;
 }
 
-/* css drag and drop image */
+/* css drag and drop area */
 .drag-drop-area {
     min-height: 200px;
     width: 100%;
     border: 1px solid var(--border-color);
     border-radius: 5px;
     margin-bottom: 10px;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: center;
     display: none;
+}
+
+.drag-drop-area.dragover {
+    background-color: rgba(0, 0, 0, 0.02) ;
 }
 
 #form-content.active,
 .form-content.active {
-    display: inline-block;
+    display: flex;
 }
+
+.top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.top span {
+    font-size: 1.6rem;
+    color: var(--text-button-color);
+}
+
+.top span:nth-child(2) {
+    padding: 6px 16px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-left: -20%;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.top span:nth-child(2):hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: 0.2s;
+}
+
+.file {
+    display: none;
+}
+/* css drag drop image preview */
+.images-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    height: auto;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.images-container .image {
+    height: 85px;
+    width: 85px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 7px;
+    margin-right: 7px;
+}
+
+.images-container .image:nth-child(4n) {
+    margin-right: 0;
+}
+
+.images-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.images-container .image span {
+    position: absolute;
+    top: -4px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    color: #fff;
+}
+
+.images-container .image span:hover {
+    opacity: 0.8;
+}
+
 
 /* css button submit */
 
